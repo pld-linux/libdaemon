@@ -9,6 +9,7 @@ Group:		Libraries
 Source0:	http://www.stud.uni-hamburg.de/~lennart/projects/libdaemon/%{name}-%{version}.tar.gz
 # Source0-md5:	0621d400f61814f36547c0faf60165ad
 URL:		http://www.stud.uni-hamburg.de/~lennart/projects/libdaemon/
+BuildRequires:	doxygen
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
