@@ -2,6 +2,7 @@ Summary:	leightweight C library which eases the writing of UNIX daemons
 Name:		libdaemon
 Version:	0.2
 Release:	1
+Epoch:		0
 License:	GPL
 Group:		Libraries
 Source0:	http://www.stud.uni-hamburg.de/~lennart/projects/libdaemon/libdaemon-0.2.tar.gz
