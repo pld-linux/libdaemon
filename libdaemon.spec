@@ -20,13 +20,13 @@ libdaemon jest prost± bibliotek± C u³atwiaj±c± pisanie demonów
 uniksowych.
 
 %package devel
-Summary:	Header files and develpment documentation for libdaemon
+Summary:	Header files and development documentation for libdaemon
 Summary(pl):	Pliki nag³ówkowe i dokumentacja programisty biblioteki libdaemon
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
-This package contains Header files and develpment documentation for
+This package contains Header files and development documentation for
 libdaemon.
 
 %description devel -l pl
@@ -61,11 +61,11 @@ install -d $RPM_BUILD_ROOT%{_mandir}
 
 cp -a doc/reference/man/* $RPM_BUILD_ROOT%{_mandir}
 
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
