@@ -1,14 +1,14 @@
 Summary:	Lightweight C library which eases the writing of UNIX daemons
 Summary(pl):	Prosta biblioteka C u³atwiaj±ca pisanie demonów uniksowych
 Name:		libdaemon
-Version:	0.3
+Version:	0.4
 Release:	1
 Epoch:		0
 License:	GPL
 Group:		Libraries
-Source0:	http://www.stud.uni-hamburg.de/~lennart/projects/libdaemon/%{name}-%{version}.tar.gz
-# Source0-md5:	0621d400f61814f36547c0faf60165ad
-URL:		http://www.stud.uni-hamburg.de/~lennart/projects/libdaemon/
+Source0:	http://0pointer.de/lennart/projects/libdaemon/%{name}-%{version}.tar.gz
+# Source0-md5:	6ca86e0d07b4669a3b37f1cad736efcc
+URL:		http://0pointer.de/lennart/projects/libdaemon/
 BuildRequires:	doxygen
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -78,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
+%{_pkgconfigdir}/*.pc
 %{_mandir}/man?/*
 
 %files static
