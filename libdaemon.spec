@@ -61,6 +61,7 @@ Ten pakiet zawiera statyczn± wersjê biblioteki libdaemon.
 %{__automake}
 %configure
 %{__make}
+%{__make} doxygen
 
 %install
 rm -rf $RPM_BUILD_ROOT
