@@ -1,4 +1,5 @@
-Summary:	leightweight C library which eases the writing of UNIX daemons
+Summary:	Lightweight C library which eases the writing of UNIX daemons
+Summary(pl):	Prosta biblioteka C u³atwiaj±ca pisanie demonów uniksowych
 Name:		libdaemon
 Version:	0.2
 Release:	1
@@ -11,26 +12,41 @@ URL:		http://www.stud.uni-hamburg.de/~lennart/projects/libdaemon/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-leightweight C library which eases the writing of UNIX daemons
+libdaemon is a lightweight C library which eases the writing of UNIX
+daemons.
+
+%description -l pl
+libdaemon jest prost± bibliotek± C u³atwiaj±c± pisanie demonów
+uniksowych.
 
 %package devel
 Summary:	Header files and develpment documentation for libdaemon
+Summary(pl):	Pliki nag³ówkowe i dokumentacja programisty biblioteki libdaemon
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
-Header files and develpment documentation for libdaemon.
+This package contains Header files and develpment documentation for
+libdaemon.
+
+%description devel -l pl
+Ten pakiet zawiera pliki nag³ówkowe i dokumentacjê programisty
+biblioteki libdaemon.
 
 %package static
 Summary:	Static libdaemon library
+Summary(pl):	Statyczna biblioteka libdaemon
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
-Static libdaemon library.
+This package contains static libdaemon library.
+
+%description static -l pl
+Ten pakiet zawiera statyczn± wersjê biblioteki libdaemon.
 
 %prep
-%setup  -q
+%setup -q
 
 %build
 %configure
@@ -45,8 +61,8 @@ install -d $RPM_BUILD_ROOT%{_mandir}
 
 cp -a doc/reference/man/* $RPM_BUILD_ROOT%{_mandir}
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %clean
 rm -rf $RPM_BUILD_ROOT
