@@ -11,6 +11,7 @@ Source0:	http://0pointer.de/lennart/projects/libdaemon/%{name}-%{version}.tar.gz
 URL:		http://0pointer.de/lennart/projects/libdaemon/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	doxygen
 BuildRequires:	lynx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,7 +28,7 @@ uniksowych.
 Summary:	Header files and development documentation for libdaemon
 Summary(pl):	Pliki nag³ówkowe i dokumentacja programisty biblioteki libdaemon
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 This package contains Header files and development documentation for
@@ -41,7 +42,7 @@ biblioteki libdaemon.
 Summary:	Static libdaemon library
 Summary(pl):	Statyczna biblioteka libdaemon
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 This package contains static libdaemon library.
@@ -53,8 +54,10 @@ Ten pakiet zawiera statyczn± wersjê biblioteki libdaemon.
 %setup -q
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
