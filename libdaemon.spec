@@ -1,4 +1,6 @@
+# Conditional build:
 %bcond_without	static_libs	# don't build static library
+#
 Summary:	Lightweight C library which eases the writing of UNIX daemons
 Summary(pl):	Prosta biblioteka C u³atwiaj±ca pisanie demonów uniksowych
 Name:		libdaemon
