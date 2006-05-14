@@ -1,13 +1,17 @@
+#
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	Lightweight C library which eases the writing of UNIX daemons
 Summary(pl):	Prosta biblioteka C u³atwiaj±ca pisanie demonów uniksowych
 Name:		libdaemon
-Version:	0.6
+Version:	0.10
 Release:	1
 Epoch:		0
-License:	GPL
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://0pointer.de/lennart/projects/libdaemon/%{name}-%{version}.tar.gz
-# Source0-md5:	5b83dd22fd72130cc4fdd46bd1a7fe8a
+# Source0-md5:	6812a5e4063b5016f25e9a0cebbd3dd9
 URL:		http://0pointer.de/lennart/projects/libdaemon/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -59,8 +63,10 @@ Ten pakiet zawiera statyczn± wersjê biblioteki libdaemon.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
+%{__make} doxygen
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -90,6 +96,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/*.pc
 %{_mandir}/man?/*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
