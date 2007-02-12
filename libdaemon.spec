@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Lightweight C library which eases the writing of UNIX daemons
-Summary(pl):	Prosta biblioteka C u³atwiaj±ca pisanie demonów uniksowych
+Summary(pl.UTF-8):   Prosta biblioteka C uÅ‚atwiajÄ…ca pisanie demonÃ³w uniksowych
 Name:		libdaemon
 Version:	0.10
 Release:	1
@@ -24,13 +24,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libdaemon is a lightweight C library which eases the writing of UNIX
 daemons.
 
-%description -l pl
-libdaemon jest prost± bibliotek± C u³atwiaj±c± pisanie demonów
+%description -l pl.UTF-8
+libdaemon jest prostÄ… bibliotekÄ… C uÅ‚atwiajÄ…cÄ… pisanie demonÃ³w
 uniksowych.
 
 %package devel
 Summary:	Header files and development documentation for libdaemon
-Summary(pl):	Pliki nag³ówkowe i dokumentacja programisty biblioteki libdaemon
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja programisty biblioteki libdaemon
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -38,21 +38,21 @@ Requires:	%{name} = %{epoch}:%{version}-%{release}
 This package contains Header files and development documentation for
 libdaemon.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe i dokumentacjê programisty
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe i dokumentacjÄ™ programisty
 biblioteki libdaemon.
 
 %package static
 Summary:	Static libdaemon library
-Summary(pl):	Statyczna biblioteka libdaemon
+Summary(pl.UTF-8):   Statyczna biblioteka libdaemon
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 This package contains static libdaemon library.
 
-%description static -l pl
-Ten pakiet zawiera statyczn± wersjê biblioteki libdaemon.
+%description static -l pl.UTF-8
+Ten pakiet zawiera statycznÄ… wersjÄ™ biblioteki libdaemon.
 
 %prep
 %setup -q
