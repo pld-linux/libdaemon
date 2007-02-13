@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Lightweight C library which eases the writing of UNIX daemons
-Summary(pl.UTF-8):   Prosta biblioteka C ułatwiająca pisanie demonów uniksowych
+Summary(pl.UTF-8):	Prosta biblioteka C ułatwiająca pisanie demonów uniksowych
 Name:		libdaemon
 Version:	0.10
 Release:	1
@@ -30,7 +30,7 @@ uniksowych.
 
 %package devel
 Summary:	Header files and development documentation for libdaemon
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja programisty biblioteki libdaemon
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja programisty biblioteki libdaemon
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -44,7 +44,7 @@ biblioteki libdaemon.
 
 %package static
 Summary:	Static libdaemon library
-Summary(pl.UTF-8):   Statyczna biblioteka libdaemon
+Summary(pl.UTF-8):	Statyczna biblioteka libdaemon
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
