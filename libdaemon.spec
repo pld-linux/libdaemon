@@ -5,13 +5,13 @@
 Summary:	Lightweight C library which eases the writing of UNIX daemons
 Summary(pl.UTF-8):	Prosta biblioteka C ułatwiająca pisanie demonów uniksowych
 Name:		libdaemon
-Version:	0.11
+Version:	0.12
 Release:	1
 Epoch:		0
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://0pointer.de/lennart/projects/libdaemon/%{name}-%{version}.tar.gz
-# Source0-md5:	b99a608ae9a762e809b667bfa20d86dd
+# Source0-md5:	76596823cc1a6d1cdf7779b782ff0ee6
 URL:		http://0pointer.de/lennart/projects/libdaemon/
 BuildRequires:	autoconf
 BuildRequires:	automake
