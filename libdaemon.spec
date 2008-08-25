@@ -5,16 +5,16 @@
 Summary:	Lightweight C library which eases the writing of UNIX daemons
 Summary(pl.UTF-8):	Prosta biblioteka C ułatwiająca pisanie demonów uniksowych
 Name:		libdaemon
-Version:	0.12
-Release:	3
+Version:	0.13
+Release:	1
 Epoch:		0
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://0pointer.de/lennart/projects/libdaemon/%{name}-%{version}.tar.gz
-# Source0-md5:	76596823cc1a6d1cdf7779b782ff0ee6
+# Source0-md5:	ae9113fcd825d5a7f07e5ddccb3c3102
 URL:		http://0pointer.de/lennart/projects/libdaemon/
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	libtool
 BuildRequires:	doxygen
 BuildRequires:	lynx
@@ -86,18 +86,25 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libdaemon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdaemon.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libdaemon.so
+%{_libdir}/libdaemon.la
 %{_includedir}/%{name}
-%{_pkgconfigdir}/*.pc
-%{_mandir}/man?/*
+%{_pkgconfigdir}/libdaemon.pc
+%{_mandir}/man3/daemon.h.3*
+%{_mandir}/man3/dexec.h.3*
+%{_mandir}/man3/dfork.h.3*
+%{_mandir}/man3/dlog.h.3*
+%{_mandir}/man3/dnonblock.h.3*
+%{_mandir}/man3/dpid.h.3*
+%{_mandir}/man3/dsignal.h.3*
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libdaemon.a
 %endif
