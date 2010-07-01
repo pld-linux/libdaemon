@@ -13,8 +13,8 @@ Group:		Libraries
 Source0:	http://0pointer.de/lennart/projects/libdaemon/%{name}-%{version}.tar.gz
 # Source0-md5:	509dc27107c21bcd9fbf2f95f5669563
 URL:		http://0pointer.de/lennart/projects/libdaemon/
-BuildRequires:	autoconf >= 2.59
-BuildRequires:	automake >= 1:1.9
+BuildRequires:	autoconf >= 2.63
+BuildRequires:	automake >= 1:1.10
 BuildRequires:	libtool
 BuildRequires:	doxygen
 BuildRequires:	lynx
@@ -64,6 +64,7 @@ Ten pakiet zawiera statyczną wersję biblioteki libdaemon.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	%{!?with_static_libs:--disable-static}
 %{__make}
 %{__make} doxygen
