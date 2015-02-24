@@ -6,7 +6,7 @@ Summary:	Lightweight C library which eases the writing of UNIX daemons
 Summary(pl.UTF-8):	Prosta biblioteka C ułatwiająca pisanie demonów uniksowych
 Name:		libdaemon
 Version:	0.14
-Release:	1
+Release:	2
 Epoch:		0
 License:	LGPL v2.1+
 Group:		Libraries
